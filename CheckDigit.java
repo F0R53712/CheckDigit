@@ -1,3 +1,6 @@
+// CheckDigit.java
+// F0R5371 ------------------------
+// Designed to find the check digit of any given sequence of digits
 public class CheckDigit
 {
     public static int getCheck(int num)
