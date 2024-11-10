@@ -1,4 +1,3 @@
-import javax.management.RuntimeErrorException;
 public class CheckDigit
 {
     public static int getCheck(int num)
@@ -6,7 +5,7 @@ public class CheckDigit
         String digits = "" + num;
         int checkSum = 0;
 
-        if (getNumberOfDigits(num) >= 1 && getNumberOfDigits(num) <= 6)
+        if (getNumberOfDigits(num) <= 6)
         {
             int multiplier = 7;
             for (int i = 0; i < getNumberOfDigits(num); i++)
@@ -42,7 +41,7 @@ public class CheckDigit
     {
         // If number is 0 or less
         if (n <= 0)
-            throw new java.lang.Error("Number less than or equal to 0 not allowed.");
+            throw new java.lang.RuntimeException("Number less than or equal to 0 not allowed.");
 
         String digits = "" + num;
 
@@ -52,6 +51,8 @@ public class CheckDigit
 
     public static void main(String[] args)
     {
+        System.out.println(getCheck(283415));
+        System.out.println(getCheck(2183));
         System.out.println(getCheck(2));
     }
 }
