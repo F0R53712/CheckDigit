@@ -51,8 +51,8 @@ public class CheckDigit
 
     public static void main(String[] args)
     {
-        System.out.println(getCheck(283415));
-        System.out.println(getCheck(2183));
-        System.out.println(getCheck(2));
+        System.out.println(getCheck(283415)); // -> 6
+        System.out.println(getCheck(2183)); // -> 2
+        System.out.println(getCheck(2)); // -> 4
     }
 }
